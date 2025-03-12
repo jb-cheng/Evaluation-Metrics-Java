@@ -7,7 +7,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
 /**
- * Evaluate Single Variable Logistic Regression
+ * Evaluate Single Variable Binary Regression
  *
  */
 public class App 
@@ -101,7 +101,7 @@ public class App
 				auc += (tpr[i-1] + tpr[i]) * Math.abs(fpr[i-1] - fpr[i]) / 2;
 			}
 
-			System.out.println("Cross-Entropy Loss: " + bce);
+			System.out.println("Binary Cross-Entropy Loss: " + bce);
 
 			System.out.println("Confusion Matrix:");
 			System.out.println("\t y=1 \t y=0");

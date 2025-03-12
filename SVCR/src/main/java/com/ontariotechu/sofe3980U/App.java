@@ -5,7 +5,7 @@ import java.util.List;
 import com.opencsv.*;
 
 /**
- * Evaluate Single Variable Linear Regression
+ * Evaluate Single Variable Continuous Regression
  *
  */
 public class App 
