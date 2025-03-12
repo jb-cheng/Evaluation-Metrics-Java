@@ -1,6 +1,5 @@
 package com.ontariotechu.sofe3980U;
 
-
 import java.io.FileReader; 
 import java.util.List;
 import com.opencsv.*;
@@ -15,7 +14,6 @@ public class App
     {
 		String[] filePaths={"model_1.csv", "model_2.csv", "model_3.csv"};
 		for (String filePath : filePaths) {
-
 			FileReader filereader;
 			List<String[]> allData;
 			try{
@@ -29,15 +27,15 @@ public class App
 			}
 			
 			// Calculate the mean squared error, mean absolute error, and mean absolute percentage error
-			System.out.println("Evaluating model: "+filePath);
+			System.out.println("Evaluating model: " + filePath);
 			int m = allData.size();
-			float mse=0;
-			float mae=0;
-			float mape=0;
-			final float EPSILON = 0.0001f;	// hyperparameter to avoid division by zero
+			double mse=0;
+			double mae=0;
+			double mape=0;
+			final double EPSILON = 0.0001f;	// hyperparameter to avoid division by zero
 			for (String[] row : allData) {
-				float y_true=Float.parseFloat(row[0]);
-				float y_predicted=Float.parseFloat(row[1]);
+				double y_true = Float.parseFloat(row[0]);
+				double y_predicted = Float.parseFloat(row[1]);
 
 				mse += Math.pow(y_true-y_predicted, 2);
 				mae += Math.abs(y_true-y_predicted);
@@ -46,13 +44,14 @@ public class App
 			mse = mse/m;
 			mae = mae/m;
 			mape = mape/m;
-			System.out.println("Mean Squared Error: "+mse);
-			System.out.println("Mean Absolute Error: "+mae);
-			System.out.println("Mean Absolute Percentage Error: "+mape);
+
+			System.out.println("Mean Squared Error: " + mse);
+			System.out.println("Mean Absolute Error: " + mae);
+			System.out.println("Mean Absolute Percentage Error: " + mape);
 			System.out.println();
 
 			// pd.head
-			/*/
+			/*
 			System.out.println("ground truth \t predicted");
 			int count=0;
 			for (String[] row : allData) { 
@@ -68,7 +67,7 @@ public class App
 			*/ 
 		}
 
-		System.out.println("model 2 is the best model as all error metrics is the lowest.");
-		System.out.println("However, the results must be compared to the dev set to ensure the model is not overfitting.");
+		System.out.println("Model 2 is the 'best' model as all error metrics are the lowest.");
+		System.out.println("However, since these are validation results, the results must be compared to the test set to ensure the model is not overfitting (i.e. high variance).");
     }
 }
