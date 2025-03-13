@@ -24,7 +24,7 @@ In the above example, **Recall on class A in the above  example would be 0%!**
 ### Precision
 On the other hand, precision computes the ratio of examples **classified as class A** that were correctly classified.  It is useful when there is an imbalenced dataset.
 
-$$Precision_\text{Class A} = \frac{\text{\text{Points that are actually class A}}}{\text{Points classified as class A}} $$
+$$Precision_\text{Class A} = \frac{\text{\text{Points that are actually class A}}}{\text{Points classified as class A}}$$
 
 In the above example, 
 **Precision on class A in the above example would be 0%!**  Technically, since there are no points classified as class A in the above example, percision would be undefined.  However, it is conventionally treated as 0% in these situations.
