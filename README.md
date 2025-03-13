@@ -20,16 +20,20 @@ Suppose that our dataset contains 5 points of class A and 5 95 points of class B
 
 ### Accuracy
 The accuracy metric is used in classification tasks.  It is simply the ratio of examples that the model correctly classified (of all classes) to the total number of datapoints.
+
 $$Accuracy=\frac{\text{Points correctly classified}}{\text{Total number of datapoints}}$$
+
 In the above example, accuracy is 95% even though it doesn't learn anything meaningful!  That is why we need recall and percision.
 
 ### Recall
 Recall is the ratio of examples **of class A** that were correctly classified. It is useful when there is an imbalenced dataset.
-$$Recall_\text{Class A} = \frac{\text{Points correctly classified as class A}}{\text{Points that are actually class A}}$$
+
+$`Recall_\text{Class A} = \frac{\text{Points correctly classified as class A}}{\text{Points that are actually class A}}`$
+
 In the above example, **Recall on class A in the above  example would be 0%!**
 
 ### Precision
 On the other hand, precision computes the ratio of examples **classified as class A** that were correctly classified.  It is useful when there is an imbalenced dataset.
-$$ Precision_\text{Class A} = \frac{\text{\text{Points that are actually class A}}}{\text{Points classified as class A}} $$
+$` Precision_\text{Class A} = \frac{\text{\text{Points that are actually class A}}}{\text{Points classified as class A}} `$
 In the above example, 
 **Precision on class A in the above example would be 0%!**  Technically, since there are no points classified as class A in the above example, percision would be undefined.  However, it is conventionally treated as 0% in these situations.
