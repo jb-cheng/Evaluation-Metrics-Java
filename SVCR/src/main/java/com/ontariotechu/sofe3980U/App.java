@@ -47,7 +47,7 @@ public class App
 
 			System.out.println("Mean Squared Error: " + mse);
 			System.out.println("Mean Absolute Error: " + mae);
-			System.out.println("Mean Absolute Percentage Error: " + mape);
+			System.out.println("Mean Absolute Relative Error: " + mape);
 			System.out.println();
 
 			// pd.head
