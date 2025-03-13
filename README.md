@@ -11,7 +11,9 @@ Suppose that our dataset contains 5 points of class A and 95 points of class B. 
 The accuracy metric is used in classification tasks.  It is simply the ratio of examples that the model correctly classified (of all classes) to the total number of datapoints.
 
 $$\begin{align*}
-Accuracy&=\frac{\text{Total number of points correctly classified}}{\text{Total number of datapoints}}\\&=\frac{TP+TN}{TP+TN+FP+FN}
+Accuracy&=\frac{\text{Total number of points correctly classified}}{\text{Total number of datapoints}}
+\\
+&=\frac{TP+TN}{TP+TN+FP+FN}
 \end{align*}$$
 
 In the above example, **accuracy is 95% even though it doesn't learn anything meaningful!**  That is why we need recall and precision.
