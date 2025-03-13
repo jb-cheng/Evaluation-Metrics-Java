@@ -133,7 +133,7 @@ public class App
 
 		}
 
-		System.out.println("Model 3 is the 'best' model as all error metrics are the lowest.");
-		System.out.println("However, since these are validation results, the results must be compared to the test set to ensure the model is not overfitting (i.e. high variance).");
+		System.out.println("Model 3 is the 'best' model as it has the lowest cross entropy and highest F1 and AUC ROC score.");
+		System.out.println("However, since these are validation results, the results must be compared to the test set to \nensure the model is not overfitting (i.e. high variance).");
 	}
 }

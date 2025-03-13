@@ -68,6 +68,6 @@ public class App
 		}
 
 		System.out.println("Model 2 is the 'best' model as all error metrics are the lowest.");
-		System.out.println("However, since these are validation results, the results must be compared to the test set to ensure the model is not overfitting (i.e. high variance).");
+		System.out.println("However, since these are validation results, the results must be \ncompared to the test set to ensure the model is not overfitting (i.e. high variance).");
     }
 }
